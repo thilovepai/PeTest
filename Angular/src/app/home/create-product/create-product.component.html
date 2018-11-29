@@ -1,0 +1,53 @@
+<app-content>
+    <form [formGroup]="form"(submit)="onSubmit()">
+      
+      <div class="row">
+        <label for="">รหัส</label>
+        <input type="text" class="form-control"  formControlName="citizenID">
+      </div>
+
+      <div class="row">
+        <label for="">ชื่อภาษาอังกฤษ</label>
+        <input type="text" class="form-control"  formControlName="name_eng">
+      </div>
+
+      <div class="row">
+        <label for="">นามสกุลภาษาอังกฤษ</label>
+        <input type="text" class="form-control"  formControlName="lastname_eng">
+      </div>
+
+      <div class="row">
+     
+        <label for="">ขื่อ</label>
+        <input type="text" class="form-control"  formControlName="name">
+       
+      </div>
+      <div class="row">
+          <label for="">นามสกุล</label>
+          <input type="text" class="form-control" formControlName="lastname">
+        </div>
+
+        <div class="row">
+            <label for="">อีเมล์</label>
+            <input type="text" class="form-control" formControlName="email">
+          </div>
+          
+          <br>
+          <div class="form-group row">
+            <label for="">เพศ</label>
+            <div class="col-md-5">
+              <select class="form-control" formControlName="gender">
+                <option selected="selected" value="ชาย">ชาย</option>
+                <option selected="selected" value="หญิง">หญิง</option>
+           
+              </select>
+            </div>
+          </div><br>
+          
+          <div class="pull-right">
+  
+              <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
+            
+          </div>
+    </form>
+  </app-content>

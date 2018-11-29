@@ -1,0 +1,52 @@
+<app-content>
+    <div>
+      <br>
+    <div>
+  <div class="pull-right">
+    
+      <button type="button" class="btn btn-success"(click)="gotoCreateProduct()">เพิ่มข้อมูล</button>
+    
+  </div>
+    </div>
+    <br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ลำดับ</th>
+          <th scope="col">รหัส</th>
+          <th scope="col">ชื่อ</th>
+          <th scope="col">นามสกุล</th>
+          <th scope="col">อีเมล์</th>
+          <th scope="col">เพศ</th>
+          <th scope="col">ชื่อภาษาอังกฤษ</th>
+          <th scope="col">นามสกุลภาษาอังกฤษ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of item.rs">
+          <th scope="row">1</th>
+          <td>{{item.citizenID}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.lastname}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.gender}}</td>
+
+          <td>{{item.name_eng}}</td>
+          <td>{{item.lastname_eng}}</td>
+
+          
+          <td>
+              
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-info" [routerLink]="['/home/edit',item.personID]">แก้ไข</button> 
+                    <button type="button" (click)="onDeleteData(item.personID)" class="btn btn-danger">ลบ</button>
+                  </div>
+            </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+  </div>
+  </app-content>
